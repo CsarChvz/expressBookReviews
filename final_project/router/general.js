@@ -32,7 +32,7 @@ public_users.get("/async", function (req, res) {
     res.send(JSON.stringify({ books }));
   });
 
-  getBooks.then(() => console.log("Promise for Task 10 is now resolved."));
+  getBooks.then(() => console.log("Promise resolved."));
 });
 
 public_users.get("/isbn/:isbn", function (req, res) {
@@ -46,7 +46,7 @@ public_users.get("/async/isbn/:isbn", function (req, res) {
     res.send(books[bookISBN]);
   });
 
-  getBook.then(() => console.log("Promise for Task 11 is now resolved."));
+  getBook.then(() => console.log("Promise resolved."));
 });
 
 public_users.get("/author/:author", function (req, res) {
@@ -77,9 +77,7 @@ public_users.get("/async/author/:author", function (req, res) {
     res.send(finalBooks);
   });
 
-  getAuthorsBooks.then(() =>
-    console.log("Promise for Task 12 is now resolved.")
-  );
+  getAuthorsBooks.then(() => console.log("Promise resolved."));
 });
 
 public_users.get("/title/:title", function (req, res) {
@@ -112,7 +110,7 @@ public_users.get("/async/title/:title", function (req, res) {
     res.send(finalBooks);
   });
 
-  getBookTitles.then(() => console.log("Promise for Task 13 is now resolved."));
+  getBookTitles.then(() => console.log("Promise resolved."));
 });
 
 public_users.get("/review/:isbn", function (req, res) {
